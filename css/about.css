@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #FF4E42; /* Màu chính: đỏ cam */
+    --secondary-color: #313140; /* Màu phụ: xám đậm */
+    --background-color: #f9f9f9; /* Màu nền: nhạt */
+    --text-color: #515164; /* Màu chữ: xám */
+    --font-family: 'Noto Sans', sans-serif; /* Font chữ */
+    --border-radius: 0 !important; /* Độ bo góc cho các phần tử */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 40px;
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.unit-title-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    
+}
+
+.unit-title-header:hover {
+    color: #e53935;
+}
+
+.account-container {
+    display: flex;
+    align-items: center;
+}
+
+.account-container .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--text-color);
+}
+
+.account-container .badge {
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 2%;
+    
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .unit-title-header {
+        font-size: 22px;
+    }
+
+    .result-title {
+        font-size: 24px;
+    }
+
+    .btn-back {
+        width: 100%;
+    }
+
+    .badge {
+        font-size: 14px;
+    }
+}
+
+
+.unit-title {
+    cursor: pointer;
+    font-weight: bold;
+    color: #515164;
+}
+
+.unit-title:hover {
+    color: var(--primary-color);
+}
+
+.unit-container {
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: var(--secondary-color); /* Màu chữ */
+    border: 1px solid #313140; /* Viền xám đậm */
+    border-radius: var(--border-radius); /* Bo góc */
+    margin-bottom: 5px; /* Khoảng cách giữa các mục */
+}
+
+.unit-container:hover {
+    background-color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: #FF4E42; /* Màu đỏ đậm */
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #CC3A32; /* Màu tối hơn khi hover */
+    border-color: #CC3A32;
+}
+
+/* Cập nhật cho danh sách Test */
+.list-group-item {
+    background-color: #FFCCCC; /* Màu nền đỏ nhạt */
+    color: var(--primary-color); /* Màu chữ */
+    border: 1px solid #FF4E42; /* Viền đỏ đậm */
+    border-radius: var(--border-radius); /* Bo góc */
+    margin-bottom: 5px; /* Khoảng cách giữa các mục */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+/*content*/
+/* Container chính của phần nội dung */
+.content {
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+/* Container cho video và quảng cáo */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Phần Video */
+.video-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px; /* Đặt giới hạn chiều rộng tối đa */
+    height: 450px;
+    border-radius: 8px;
+}
+
+/* Phần Quảng Cáo */
+.ad-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Để phần quảng cáo có một khoảng cách trên */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+.ad-section:hover {
+    transform: translateY(-5px); /* Dịch chuyển lên một chút khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
+}
+
+.ad-section h3 {
+    font-size: 22px;
+    color: #FF4E42;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ad-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.register-link {
+    display: inline-block;
+    background-color: #FF4E42;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển màu nền và chuyển động */
+}
+
+.register-link:hover {
+    background-color: #FF4E42; /* Màu thay đổi khi hover */
+    transform: translateX(5px); /* Dịch chuyển nút sang phải khi hover */
+}
+

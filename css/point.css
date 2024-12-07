@@ -1,0 +1,244 @@
+:root {
+    --primary-color: #FF4E42 !important; /* Màu chính: đỏ cam */
+    --secondary-color: #313140; /* Màu phụ: xám đậm */
+    --background-color: #f9f9f9; /* Màu nền: nhạt */
+    --text-color: #515164; /* Màu chữ: xám */
+    --font-family: 'Noto Sans', sans-serif; /* Font chữ */
+    --border-radius: 0 !important; /* Độ bo góc cho các phần tử */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.unit-title-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    
+}
+
+.unit-title-header:hover {
+    color: #e53935;
+}
+
+.account-container {
+    display: flex;
+    align-items: center;
+}
+
+.account-container .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--text-color);
+}
+
+.account-container .badge {
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.result-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.result-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.result-details {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.question-container {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+}
+
+.btn-back {
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+}
+.text center {
+    background-color: var(--bs-dark-border-subtle);
+}
+.btn-back:hover {
+    background-color: #e53935;
+}
+
+
+
+
+/* Kết quả bài kiểm tra */
+.result-container {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+    transition: transform 0.3s ease;
+}
+
+.result-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+/* Hiển thị chi tiết câu trả lời */
+.result-details {
+    margin-top: 30px;
+}
+
+.question-result {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 0;
+    border-left: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.question-result:hover {
+    background-color: #e9ecef;
+}
+
+.question-result h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Kết quả đúng/sai */
+.badge-correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-incorrect {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Nút Trở lại */
+.btn-back {
+    width: 200px;
+    margin: 30px auto;
+    display: block;
+    background-color: #007bff;
+    color: rgb(255, 168, 168);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Các phần tử khi hover */
+.unit-container {
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+.unit-container:hover {
+    background-color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+/* Điều chỉnh chiều cao các phần tử trong kết quả bài kiểm tra */
+.result-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .unit-title-header {
+        font-size: 22px;
+    }
+
+    .result-title {
+        font-size: 24px;
+    }
+
+    .btn-back {
+        width: 100%;
+    }
+
+    .badge {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #FF4E42 !important; /* Màu chính: đỏ cam */
+    --secondary-color: #313140 !important; /* Màu phụ: xám đậm */
+    --background-color: #f9f9f9 !important; /* Màu nền: nhạt */
+    --text-color: #515164 ; /* Màu chữ: xám */
+    font-family: 'Noto Sans', sans-serif !important; /* Font chữ */
+    border-radius: 8px !important; /* Bo góc mặc định */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6b60; /* Màu sáng hơn để tạo hiệu ứng */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group-text, .form-control {
+    border-radius: var(--border-radius);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tùy chỉnh cho màu phụ */
+.navbar {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* Tùy chỉnh cho màu phụ */
+header {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.unit-title-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    
+}
+
+.unit-title-header:hover {
+    color: #e53935;
+}
+
+.account-container {
+    display: flex;
+    align-items: center;
+}
+
+.account-container .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--text-color);
+}
+
+.account-container .badge {
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .unit-title-header {
+        font-size: 22px;
+    }
+
+    .result-title {
+        font-size: 24px;
+    }
+
+    .btn-back {
+        width: 100%;
+    }
+
+    .badge {
+        font-size: 14px;
+    }
+}
